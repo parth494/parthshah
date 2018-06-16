@@ -21,9 +21,9 @@ if(isset($_POST['submit'])) {
       $mail->Port = 587;
       $mail->SMTPSecure = 'tls';
       $mail->SMTPAuth = true;
-      $mail->Username = "pashahosting1@gmail.com";
-      $mail->Password = "parthshah@123";
-      $mail->setFrom("pashahosting1@gmail.com", "Parth Shah");
+      $mail->Username = "<gmailid>";
+      $mail->Password = "<gmailpassword>";
+      $mail->setFrom("<gmailid>", "Parth Shah");
       $mail->addAddress($email);
       $mail->Subject = $subject;
       $mail->msgHTML($message);
@@ -35,7 +35,7 @@ if(isset($_POST['submit'])) {
       //echo '<center><div class="subheading mb-5">Thank you for your message!</div></center>';
       }
 
-      $email = 'pashahosting1@gmail.com';
+      $email = '<gmailid>';
       $subject = "New message from " . $_POST['name'];
       $message = "Name: " . $_POST['name'] . "\nEmail address: " . $_POST['email'] . "\nMessage: " . $_POST['message'];
       $message = nl2br($message);
@@ -45,8 +45,8 @@ if(isset($_POST['submit'])) {
       $mail->Port = 587;
       $mail->SMTPSecure = 'tls';
       $mail->SMTPAuth = true;
-      $mail->Username = "pashahosting1@gmail.com";
-      $mail->Password = "parthshah@123";
+      $mail->Username = "<gmailid>";
+      $mail->Password = "<gmailpassword>";
       $mail->setFrom($_POST['email'], $_POST['name']);
       $mail->addAddress($email);
       $mail->Subject = $subject;
