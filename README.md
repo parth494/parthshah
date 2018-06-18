@@ -1,2 +1,2 @@
 # parthshah
-My personal website with my portfolio
+My personal website
